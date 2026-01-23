@@ -1,0 +1,222 @@
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import SEO from "../components/SEO";
+
+export default function Contact() {
+  const areas = [
+    "Mumbai",
+    "Navi Mumbai",
+    "Thane",
+    "Andheri",
+    "Powai",
+    "Vashi",
+    "Kharghar",
+    "Panvel",
+    "Borivali",
+    "Mulund",
+    "Ghatkopar",
+    "Kurla",
+    "Bandra",
+    "Worli",
+    "Lower Parel",
+    "Dadar",
+  ];
+
+  return (
+    <>
+      <SEO
+        title="Contact Us"
+        description="Contact Harsh Furniture Hirers for furniture rental in Mumbai, Navi Mumbai, and Thane. Call +91 98765 43210 or WhatsApp us for bulk furniture rental quotes."
+        keywords="contact furniture rental Mumbai, furniture hire contact, Harsh Furniture Hirers contact"
+      />
+
+      <section className="page-hero">
+        <div className="container">
+          <h1 className="page-title">Contact Us</h1>
+          <p className="page-subtitle">
+            Get in touch for furniture rental inquiries and bulk quotes
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="contact-grid">
+            <div className="contact-info">
+              <h2 className="contact-heading">Harsh Furniture Hirers</h2>
+              <p className="contact-intro">
+                We are here to help with all your furniture rental needs.
+                Contact us today for competitive pricing, bulk availability, and
+                flexible rental terms.
+              </p>
+
+              <div className="contact-methods">
+                <div className="contact-method">
+                  <div className="contact-method-icon">
+                    <Phone size={24} />
+                  </div>
+                  <div className="contact-method-content">
+                    <h3>Phone</h3>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                    <p>Call us for immediate assistance</p>
+                  </div>
+                </div>
+
+                <div className="contact-method">
+                  <div className="contact-method-icon">
+                    <MessageCircle size={24} />
+                  </div>
+                  <div className="contact-method-content">
+                    <h3>WhatsApp</h3>
+                    <a
+                      href="https://wa.me/919876543210?text=Hi, I'm interested in furniture rental services"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +91 98765 43210
+                    </a>
+                    <p>Quick response on WhatsApp</p>
+                  </div>
+                </div>
+
+                <div className="contact-method">
+                  <div className="contact-method-icon">
+                    <Mail size={24} />
+                  </div>
+                  <div className="contact-method-content">
+                    <h3>Email</h3>
+                    <a href="mailto:info@harshfurniturehirers.com">
+                      info@harshfurniturehirers.com
+                    </a>
+                    <p>Send us your requirements</p>
+                  </div>
+                </div>
+
+                <div className="contact-method">
+                  <div className="contact-method-icon">
+                    <MapPin size={24} />
+                  </div>
+                  <div className="contact-method-content">
+                    <h3>Service Areas</h3>
+                    <p>Mumbai, Navi Mumbai, Thane</p>
+                  </div>
+                </div>
+
+                <div className="contact-method">
+                  <div className="contact-method-icon">
+                    <Clock size={24} />
+                  </div>
+                  <div className="contact-method-content">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                    <p>Sunday: 10:00 AM - 5:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="contact-form-wrapper">
+              <h2 className="contact-form-heading">Send Us a Message</h2>
+              <form className="contact-form">
+                <div className="form-group">
+                  <label htmlFor="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="service">Service Required</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="beds">Beds & Mattresses</option>
+                    <option value="guest-house">Guest House Furniture</option>
+                    <option value="office">Office Furniture</option>
+                    <option value="event">Event Furniture</option>
+                    <option value="home">Home Furniture</option>
+                    <option value="appliances">Appliances</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    placeholder="Tell us about your furniture requirements"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="button button-primary form-submit"
+                >
+                  Send Message
+                </button>
+              </form>
+
+              <p className="form-note">
+                For immediate assistance, please call or WhatsApp us directly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <h2 className="section-title">Areas We Serve</h2>
+          <p className="section-subtitle">
+            Furniture rental and delivery across Mumbai region
+          </p>
+          <div className="areas-grid">
+            {areas.map((area, index) => (
+              <div key={index} className="area-tag">
+                {area}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="map-wrapper">
+            <h2 className="section-title">Find Us</h2>
+            <div className="map-placeholder">
+              <MapPin size={48} />
+              <p>Serving Mumbai, Navi Mumbai, and Thane</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
