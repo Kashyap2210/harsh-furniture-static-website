@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer bg-slate-900 text-slate-200">
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-section">
