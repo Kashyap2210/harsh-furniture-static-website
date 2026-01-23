@@ -190,12 +190,7 @@
 
   .nav-link:hover {
     /* background: var(--bg-alt); */
-    color: rgb(231, 215, 217);
-  }
-
-  .nav-link-active {
-    /* color: var(--accent); */
-    /* background: var(--bg-alt); */
+    color: rgb(243, 171, 214);
   }
 
   .nav-cta {
