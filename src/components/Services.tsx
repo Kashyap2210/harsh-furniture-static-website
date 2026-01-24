@@ -1,89 +1,8 @@
-import { Bed, Briefcase, Building2, Calendar, Home, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { servicesV2 } from "../data/services";
 
 export default function Services() {
-  const services = [
-    {
-      icon: <Bed size={48} />,
-      title: "Beds & Mattresses on Rent",
-      description:
-        "High-quality beds and mattresses available for rent in bulk quantities. Perfect for guest houses, hostels, and staff accommodations. We offer single beds, double beds, queen size, and king size options with comfortable mattresses.",
-      features: [
-        "Single, double, queen, and king size beds",
-        "Comfortable mattresses with quality foam",
-        "Bulk availability for guest houses",
-        "Flexible rental periods",
-        "Clean and well-maintained",
-      ],
-    },
-    {
-      icon: <Building2 size={48} />,
-      title: "Guest House Furniture on Rent",
-      description:
-        "Complete furniture solutions for guest houses and paying guest accommodations. We provide everything needed to furnish multiple rooms, from beds and wardrobes to dining furniture and living room sets.",
-      features: [
-        "Complete room furniture packages",
-        "Beds, mattresses, and wardrobes",
-        "Dining tables and chairs",
-        "Living room furniture",
-        "Bulk rental discounts available",
-      ],
-    },
-    {
-      icon: <Briefcase size={48} />,
-      title: "Office Furniture on Rent",
-      description:
-        "Professional office furniture rental for corporate offices, startups, and temporary workspaces. Our inventory includes desks, chairs, conference tables, and storage solutions suitable for modern office environments.",
-      features: [
-        "Executive desks and workstations",
-        "Ergonomic office chairs",
-        "Conference and meeting tables",
-        "Storage cabinets and shelves",
-        "Reception area furniture",
-      ],
-    },
-    {
-      icon: <Calendar size={48} />,
-      title: "Event & Banquet Furniture on Rent",
-      description:
-        "Furniture rental for weddings, events, conferences, and banquets. We provide chairs, tables, sofas, and decorative furniture to create comfortable and elegant event spaces for any occasion.",
-      features: [
-        "Banquet chairs and tables",
-        "Sofa sets and lounge furniture",
-        "Stage and backdrop furniture",
-        "Dining arrangements",
-        "Delivery, setup, and pickup included",
-      ],
-    },
-    {
-      icon: <Home size={48} />,
-      title: "Home Furniture on Rent",
-      description:
-        "Temporary furniture solutions for homes and families. Whether you are relocating, waiting for your permanent furniture, or need furniture for a short stay, we offer complete home furniture packages.",
-      features: [
-        "Living room furniture sets",
-        "Bedroom furniture packages",
-        "Dining table and chairs",
-        "Kitchen essentials",
-        "Short and long-term rental options",
-      ],
-    },
-    {
-      icon: <Zap size={48} />,
-      title: "Appliances on Rent",
-      description:
-        "Household appliances available for rent, including washing machines, air coolers, refrigerators, and more. Ideal for temporary accommodations, guest houses, and rental properties.",
-      features: [
-        "Washing machines - semi and fully automatic",
-        "Air coolers and desert coolers",
-        "Refrigerators",
-        "Water purifiers",
-        "Well-maintained and serviced regularly",
-      ],
-    },
-  ];
-
   return (
     <>
       <SEO
@@ -105,7 +24,7 @@ export default function Services() {
       <section className="section">
         <div className="container">
           <div className="services-detail-grid">
-            {services.map((service, index) => (
+            {servicesV2.map((service, index) => (
               <div key={index} className="service-detail-card">
                 <div className="service-detail-header">
                   <div className="service-detail-icon">{service.icon}</div>

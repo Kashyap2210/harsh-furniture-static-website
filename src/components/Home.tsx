@@ -1,74 +1,9 @@
-import {
-  Bed,
-  Briefcase,
-  Building2,
-  Calendar,
-  Sofa,
-  Sparkles,
-} from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { areas, trustPoints } from "../data/data";
+import { homeServices } from "../data/services";
 
 export default function Home() {
-  const services = [
-    {
-      icon: <Bed size={40} />,
-      title: "Beds & Mattresses",
-      description:
-        "Quality beds and mattresses available for rent in bulk quantities",
-    },
-    {
-      icon: <Building2 size={40} />,
-      title: "Guest House Furniture",
-      description:
-        "Complete furniture solutions for guest houses and accommodations",
-    },
-    {
-      icon: <Briefcase size={40} />,
-      title: "Office Furniture",
-      description: "Professional office furniture rental for corporates",
-    },
-    {
-      icon: <Calendar size={40} />,
-      title: "Event Furniture",
-      description: "Furniture rental for weddings, events, and banquets",
-    },
-    {
-      icon: <Sofa size={40} />,
-      title: "Home Furniture",
-      description: "Temporary furniture solutions for homes and families",
-    },
-    {
-      icon: <Sparkles size={40} />,
-      title: "Appliances",
-      description: "Washing machines, coolers, and other appliances on rent",
-    },
-  ];
-
-  const trustPoints = [
-    "Bulk Availability",
-    "Competitive Pricing",
-    "On-Time Delivery",
-    "Quality Furniture",
-    "Flexible Rental Terms",
-    "Professional Service",
-  ];
-
-  const areas = [
-    "Mumbai",
-    "Navi Mumbai",
-    "Thane",
-    "Andheri",
-    "Powai",
-    "Vashi",
-    "Kharghar",
-    "Panvel",
-    "Borivali",
-    "Mulund",
-    "Ghatkopar",
-    "Kurla",
-  ];
-
   return (
     <>
       <SEO
@@ -135,8 +70,8 @@ export default function Home() {
             </p>
           </div>
           <div className="services-grid">
-            {services.map((service, index) => (
-              <div key={index} className="service-card">
+            {homeServices.map((service, index) => (
+              <div key={index} className="service-card cursor-pointer">
                 <div className="service-icon">{service.icon}</div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>

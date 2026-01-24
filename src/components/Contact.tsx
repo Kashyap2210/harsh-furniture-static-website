@@ -1,26 +1,8 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import SEO from "../components/SEO";
+import { areas } from "../data/data";
 
 export default function Contact() {
-  const areas = [
-    "Mumbai",
-    "Navi Mumbai",
-    "Thane",
-    "Andheri",
-    "Powai",
-    "Vashi",
-    "Kharghar",
-    "Panvel",
-    "Borivali",
-    "Mulund",
-    "Ghatkopar",
-    "Kurla",
-    "Bandra",
-    "Worli",
-    "Lower Parel",
-    "Dadar",
-  ];
-
   return (
     <>
       <SEO
