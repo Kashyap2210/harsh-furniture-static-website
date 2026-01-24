@@ -1,95 +1,9 @@
 import { useState } from "react";
 import SEO from "../components/SEO";
+import { categories, galleryItems } from "../data/data";
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const categories = [
-    { id: "all", name: "All" },
-    { id: "beds", name: "Beds & Mattresses" },
-    { id: "guest-house", name: "Guest House" },
-    { id: "office", name: "Office" },
-    { id: "event", name: "Events" },
-    { id: "home", name: "Home" },
-  ];
-
-  const galleryItems = [
-    {
-      category: "beds",
-      title: "Queen Size Bed",
-      description: "Comfortable queen size bed with quality mattress",
-    },
-    {
-      category: "beds",
-      title: "Single Beds",
-      description: "Single beds perfect for guest houses",
-    },
-    {
-      category: "beds",
-      title: "King Size Bed",
-      description: "Spacious king size bed with premium mattress",
-    },
-    {
-      category: "guest-house",
-      title: "Guest Room Setup",
-      description: "Complete guest room furniture package",
-    },
-    {
-      category: "guest-house",
-      title: "Multiple Room Furniture",
-      description: "Bulk furniture for guest house rooms",
-    },
-    {
-      category: "guest-house",
-      title: "Wardrobe & Storage",
-      description: "Storage solutions for guest accommodations",
-    },
-    {
-      category: "office",
-      title: "Executive Desk",
-      description: "Professional office desk with storage",
-    },
-    {
-      category: "office",
-      title: "Office Chairs",
-      description: "Ergonomic office chairs",
-    },
-    {
-      category: "office",
-      title: "Conference Table",
-      description: "Large conference table for meetings",
-    },
-    {
-      category: "event",
-      title: "Banquet Chairs",
-      description: "Elegant chairs for events and weddings",
-    },
-    {
-      category: "event",
-      title: "Dining Setup",
-      description: "Complete dining arrangement for events",
-    },
-    {
-      category: "event",
-      title: "Lounge Furniture",
-      description: "Comfortable seating for event spaces",
-    },
-    {
-      category: "home",
-      title: "Living Room Set",
-      description: "Complete living room furniture",
-    },
-    {
-      category: "home",
-      title: "Dining Table Set",
-      description: "Dining table with chairs",
-    },
-    {
-      category: "home",
-      title: "Bedroom Set",
-      description: "Complete bedroom furniture package",
-    },
-  ];
 
   const filteredItems =
     selectedCategory === "all"

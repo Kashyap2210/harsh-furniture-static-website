@@ -1,12 +1,12 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function MobileCTA() {
   return (
     <div className="mobile-cta">
-      <a href="tel:+919876543210" className="mobile-cta-button mobile-cta-call">
+      {/* <a href="tel:+919876543210" className="mobile-cta-button mobile-cta-call">
         <Phone size={20} />
         <span>Call Now</span>
-      </a>
+      </a> */}
       <a
         href="https://wa.me/919876543210?text=Hi, I'm interested in furniture rental services"
         target="_blank"

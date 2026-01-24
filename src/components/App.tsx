@@ -20,9 +20,11 @@ export default function About() {
         keywords="furniture rental Mumbai, about Harsh Furniture Hirers, furniture hire company"
       />
 
-      <section className="page-hero">
+      <section className="page-hero bg-pink-50">
         <div className="container">
-          <h1 className="page-title">About Harsh Furniture Hirers</h1>
+          <h1 className="page-title text-black">
+            About Harsh Furniture Hirers
+          </h1>
           <p className="page-subtitle">
             Your trusted partner for quality furniture rental in Mumbai, Navi
             Mumbai, and Thane
@@ -30,12 +32,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-pink-50">
         <div className="container">
           <div className="content-grid">
             <div className="content-text">
-              <h2 className="content-heading">Who We Are</h2>
-              <p className="content-paragraph">
+              <h2 className="content-heading text-black">Who We Are</h2>
+              <p className="content-paragraph text-gray-800">
                 Harsh Furniture Hirers is a professional furniture rental
                 company serving Mumbai, Navi Mumbai, and Thane. We specialize in
                 providing quality furniture on rent for guest houses, corporate
@@ -65,7 +67,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section section-alt bg-pink-50">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Why Choose Us</h2>
@@ -84,7 +86,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-pink-50">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Our Expertise</h2>
@@ -120,18 +122,24 @@ export default function About() {
         </div>
       </section>
 
-      <section className="cta-section">
+      <section className="cta-section bg-pink-50">
         <div className="container">
           <div className="cta-content">
-            <h2 className="cta-title">Let's Work Together</h2>
-            <p className="cta-text">
+            <h2 className="cta-title text-black">Let's Work Together</h2>
+            <p className="cta-text ">
               Contact us to discuss your furniture rental requirements
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="button button-light">
+              <Link
+                to="/contact"
+                className="button bg-rose-700 button-light text-white"
+              >
                 Contact Us
               </Link>
-              <Link to="/services" className="button button-outline">
+              <Link
+                to="/services"
+                className="button button-light text-white bg-rose-700"
+              >
                 View Services
               </Link>
             </div>
