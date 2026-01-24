@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, Phone, X } from "lucide-react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="nav-wrapper">
+    <nav className="nav-wrapper bg-gradient-to-r from-pink-700 to-rose-800 text-white">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           Harsh Furniture Hirers
@@ -31,12 +31,12 @@ export default function Navigation() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <div className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+        <div className={`nav-menu ${isMenuOpen ? "nav-menu-open" : ""}`}>
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-link ${isActive(link.path) ? 'nav-link-active' : ''}`}
+              className={`nav-link ${isActive(link.path) ? "nav-link-active" : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
