@@ -10,7 +10,7 @@ export default function Navigation() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="nav-wrapper">
+    <nav className="nav-wrapper bg-gradient-to-r from-pink-700 to-rose-800 text-white">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           Harsh Furniture Hirers
@@ -24,12 +24,12 @@ export default function Navigation() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <div className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+        <div className={`nav-menu ${isMenuOpen ? "nav-menu-open" : ""}`}>
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-link ${isActive(link.path) ? 'nav-link-active' : ''}`}
+              className={`nav-link ${isActive(link.path) ? "nav-link-active" : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}

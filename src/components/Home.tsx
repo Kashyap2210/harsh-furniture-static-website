@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       <section className="section bg-pink-50">
-        <div className="container">
+        <div className="container bg-pink-50">
           <div className="section-header">
             <h2 className="section-title">
               Why Choose Harsh Furniture Hirers?
@@ -104,18 +104,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="cta-section">
+      <section className="bg-gradient-to-r from-pink-700 to-rose-800 text-white py-20">
         <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Rent Furniture?</h2>
-            <p className="cta-text">
+          <div className="max-w-5xl mx-auto text-center px-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Ready to Rent Furniture?
+            </h2>
+
+            <p className="text-pink-100 text-lg mb-8">
               Contact us today for competitive pricing and bulk availability
             </p>
             <div className="cta-buttons">
-              <a href="tel:+919876543210" className="button button-light">
+              <a
+                href="tel:+919876543210"
+                className="button button-light text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
+              >
                 Call +91 98765 43210
               </a>
-              <Link to="/contact" className="button button-outline">
+              <Link
+                to="/contact"
+                className="button button-light text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
+              >
                 Get in Touch
               </Link>
             </div>

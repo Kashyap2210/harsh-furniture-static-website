@@ -11,8 +11,8 @@ export default function Services() {
         keywords="furniture rental services, beds on rent, office furniture rental, event furniture, guest house furniture, appliances on rent Mumbai"
       />
 
-      <section className="page-hero">
-        <div className="container">
+      <section className="page-hero bg-pink-50">
+        <div className="container  bg-pink-50">
           <h1 className="page-title">Our Services</h1>
           <p className="page-subtitle">
             Comprehensive furniture rental solutions for every need in Mumbai,
@@ -21,8 +21,8 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
+      <section className="section bg-pink-50">
+        <div className="container bg-pink-50">
           <div className="services-detail-grid">
             {servicesV2.map((service, index) => (
               <div key={index} className="service-detail-card">
@@ -44,7 +44,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section section-alt bg-pink-50">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Perfect For</h2>
