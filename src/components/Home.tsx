@@ -25,14 +25,23 @@ export default function Home() {
               Thane.
             </p>
             <div className="hero-cta">
-              <a href="tel:+919876543210" className="button button-primary">
+              {/* <a
+                href="tel:+919876543210"
+                className="button button-light bg-gray-50 text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
+              >
+                Call +91 98765 43210
+              </a> */}
+              <a
+                href="tel:+919876543210"
+                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+              >
                 Call Now
               </a>
               <a
                 href="https://wa.me/919876543210?text=Hi, I'm interested in furniture rental services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button button-secondary"
+                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
               >
                 WhatsApp Us
               </a>
@@ -117,13 +126,13 @@ export default function Home() {
             <div className="cta-buttons">
               <a
                 href="tel:+919876543210"
-                className="button button-light text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
+                className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
               >
                 Call +91 98765 43210
               </a>
               <Link
                 to="/contact"
-                className="button button-light text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
+                className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
               >
                 Get in Touch
               </Link>
