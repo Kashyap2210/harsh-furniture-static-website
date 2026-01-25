@@ -1,95 +1,11 @@
 import { useState } from "react";
 import SEO from "../components/SEO";
+import { phoneNumber } from "../data/constants";
+import { categories, galleryItems } from "../data/data";
+import GenericButton from "./GenericButton";
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const categories = [
-    { id: "all", name: "All" },
-    { id: "beds", name: "Beds & Mattresses" },
-    { id: "guest-house", name: "Guest House" },
-    { id: "office", name: "Office" },
-    { id: "event", name: "Events" },
-    { id: "home", name: "Home" },
-  ];
-
-  const galleryItems = [
-    {
-      category: "beds",
-      title: "Queen Size Bed",
-      description: "Comfortable queen size bed with quality mattress",
-    },
-    {
-      category: "beds",
-      title: "Single Beds",
-      description: "Single beds perfect for guest houses",
-    },
-    {
-      category: "beds",
-      title: "King Size Bed",
-      description: "Spacious king size bed with premium mattress",
-    },
-    {
-      category: "guest-house",
-      title: "Guest Room Setup",
-      description: "Complete guest room furniture package",
-    },
-    {
-      category: "guest-house",
-      title: "Multiple Room Furniture",
-      description: "Bulk furniture for guest house rooms",
-    },
-    {
-      category: "guest-house",
-      title: "Wardrobe & Storage",
-      description: "Storage solutions for guest accommodations",
-    },
-    {
-      category: "office",
-      title: "Executive Desk",
-      description: "Professional office desk with storage",
-    },
-    {
-      category: "office",
-      title: "Office Chairs",
-      description: "Ergonomic office chairs",
-    },
-    {
-      category: "office",
-      title: "Conference Table",
-      description: "Large conference table for meetings",
-    },
-    {
-      category: "event",
-      title: "Banquet Chairs",
-      description: "Elegant chairs for events and weddings",
-    },
-    {
-      category: "event",
-      title: "Dining Setup",
-      description: "Complete dining arrangement for events",
-    },
-    {
-      category: "event",
-      title: "Lounge Furniture",
-      description: "Comfortable seating for event spaces",
-    },
-    {
-      category: "home",
-      title: "Living Room Set",
-      description: "Complete living room furniture",
-    },
-    {
-      category: "home",
-      title: "Dining Table Set",
-      description: "Dining table with chairs",
-    },
-    {
-      category: "home",
-      title: "Bedroom Set",
-      description: "Complete bedroom furniture package",
-    },
-  ];
 
   const filteredItems =
     selectedCategory === "all"
@@ -104,7 +20,7 @@ export default function Gallery() {
         keywords="furniture gallery, rental furniture Mumbai, beds on rent, office furniture images"
       />
 
-      <section className="page-hero">
+      <section className="page-hero bg-pink-50">
         <div className="container">
           <h1 className="page-title">Our Furniture Gallery</h1>
           <p className="page-subtitle">
@@ -113,21 +29,20 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section py-3rem bg-pink-50">
         <div className="container">
           <div className="gallery-filters">
             {categories.map((category) => (
-              <button
+              <GenericButton
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`gallery-filter-btn ${
+                label={category.name}
+                className={`button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition ${
                   selectedCategory === category.id
                     ? "gallery-filter-btn-active"
                     : ""
                 }`}
-              >
-                {category.name}
-              </button>
+              />
             ))}
           </div>
 
@@ -160,7 +75,7 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section section-alt bg-pink-50 pt-8 pb-16">
         <div className="container">
           <div className="gallery-note">
             <h2>Want to See More?</h2>
@@ -170,16 +85,15 @@ export default function Gallery() {
               for immediate rental.
             </p>
             <div className="gallery-note-cta">
-              <a href="tel:+919876543210" className="button button-primary">
-                Call Us
-              </a>
               <a
-                href="https://wa.me/919876543210?text=Hi, I'd like to see more furniture options"
+                href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button button-secondary"
               >
-                WhatsApp
+                <GenericButton
+                  className="button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                  label="Whatsapp"
+                ></GenericButton>
               </a>
             </div>
           </div>

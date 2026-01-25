@@ -1,74 +1,12 @@
-import {
-  Bed,
-  Briefcase,
-  Building2,
-  Calendar,
-  Sofa,
-  Sparkles,
-} from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { phoneNumber } from "../data/constants";
+import { areas, trustPoints } from "../data/data";
+import { homeServices } from "../data/services";
+import GenericButton from "./GenericButton";
+import GenericIcon from "./GenericIcon";
 
 export default function Home() {
-  const services = [
-    {
-      icon: <Bed size={40} />,
-      title: "Beds & Mattresses",
-      description:
-        "Quality beds and mattresses available for rent in bulk quantities",
-    },
-    {
-      icon: <Building2 size={40} />,
-      title: "Guest House Furniture",
-      description:
-        "Complete furniture solutions for guest houses and accommodations",
-    },
-    {
-      icon: <Briefcase size={40} />,
-      title: "Office Furniture",
-      description: "Professional office furniture rental for corporates",
-    },
-    {
-      icon: <Calendar size={40} />,
-      title: "Event Furniture",
-      description: "Furniture rental for weddings, events, and banquets",
-    },
-    {
-      icon: <Sofa size={40} />,
-      title: "Home Furniture",
-      description: "Temporary furniture solutions for homes and families",
-    },
-    {
-      icon: <Sparkles size={40} />,
-      title: "Appliances",
-      description: "Washing machines, coolers, and other appliances on rent",
-    },
-  ];
-
-  const trustPoints = [
-    "Bulk Availability",
-    "Competitive Pricing",
-    "On-Time Delivery",
-    "Quality Furniture",
-    "Flexible Rental Terms",
-    "Professional Service",
-  ];
-
-  const areas = [
-    "Mumbai",
-    "Navi Mumbai",
-    "Thane",
-    "Andheri",
-    "Powai",
-    "Vashi",
-    "Kharghar",
-    "Panvel",
-    "Borivali",
-    "Mulund",
-    "Ghatkopar",
-    "Kurla",
-  ];
-
   return (
     <>
       <SEO
@@ -80,7 +18,7 @@ export default function Home() {
       <section className="hero bg-pink-50">
         <div className="container ">
           <div className="hero-content">
-            <h1 className="hero-title text-black">
+            <h1 className="hero-title text-slate-800">
               Furniture on Rent in Mumbai
             </h1>
             <p className="hero-subtitle  text-black">
@@ -90,16 +28,28 @@ export default function Home() {
               Thane.
             </p>
             <div className="hero-cta">
-              <a href="tel:+919876543210" className="button button-primary">
-                Call Now
+              <a href={`tel:${phoneNumber}`}>
+                <GenericButton
+                  label={"Call Now"}
+                  className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                  // onClick={() => {
+                  //   console.log(phoneNumber);
+                  // }}
+                ></GenericButton>
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hi, I'm interested in furniture rental services"
+                href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button button-secondary"
+                // className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
               >
-                WhatsApp Us
+                <GenericButton
+                  label={"WhatsApp Us"}
+                  className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                  // onClick={() => {
+                  //   console.log(phoneNumber);
+                  // }}
+                ></GenericButton>
               </a>
             </div>
           </div>
@@ -135,17 +85,24 @@ export default function Home() {
             </p>
           </div>
           <div className="services-grid">
-            {services.map((service, index) => (
+            {homeServices.map((service, index) => (
               <div key={index} className="service-card cursor-pointer">
-                <div className="service-icon">{service.icon}</div>
+                <GenericIcon
+                  icon={service.icon}
+                  className=" service-icon icon"
+                ></GenericIcon>
+
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
               </div>
             ))}
           </div>
           <div className="section-cta">
-            <Link to="/services" className="button button-primary">
-              View All Services
+            <Link to="/services">
+              <GenericButton
+                className="button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                label="View All Services"
+              ></GenericButton>
             </Link>
           </div>
         </div>
@@ -161,9 +118,11 @@ export default function Home() {
           </div>
           <div className="areas-grid">
             {areas.map((area, index) => (
-              <div key={index} className="area-tag">
-                {area}
-              </div>
+              <GenericButton
+                key={index}
+                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                label={area}
+              ></GenericButton>
             ))}
           </div>
         </div>
@@ -180,17 +139,17 @@ export default function Home() {
               Contact us today for competitive pricing and bulk availability
             </p>
             <div className="cta-buttons">
-              <a
-                href="tel:+919876543210"
-                className="button button-light text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
-              >
-                Call +91 98765 43210
+              <a href={`tel:${phoneNumber}`}>
+                <GenericButton
+                  className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
+                  label={`Call Now`}
+                ></GenericButton>
               </a>
-              <Link
-                to="/contact"
-                className="button button-light text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
-              >
-                Get in Touch
+              <Link to="/contact">
+                <GenericButton
+                  className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
+                  label="Get in Touch"
+                ></GenericButton>
               </Link>
             </div>
           </div>
