@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { areas, trustPoints } from "../data/data";
 import { homeServices } from "../data/services";
-import GenericButton from "./Button";
+import GenericButton from "./GenericButton";
 
 export default function Home() {
   return (
@@ -91,7 +91,7 @@ export default function Home() {
           <div className="section-cta">
             <Link to="/services">
               <GenericButton
-                className=" button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                className="button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
                 label="View All Services"
               ></GenericButton>
             </Link>

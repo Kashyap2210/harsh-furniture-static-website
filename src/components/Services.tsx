@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { perfectData } from "../data/data";
 import { servicesV2 } from "../data/services";
-import GenericButton from "./Button";
+import GenericButton from "./GenericButton";
 
 export default function Services() {
   return (
