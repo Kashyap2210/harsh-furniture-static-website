@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { areas, trustPoints } from "../data/data";
 import { homeServices } from "../data/services";
+import GenericButton from "./Button";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <section className="hero bg-pink-50">
         <div className="container ">
           <div className="hero-content">
-            <h1 className="hero-title text-black">
+            <h1 className="hero-title text-slate-800">
               Furniture on Rent in Mumbai
             </h1>
             <p className="hero-subtitle  text-black">
@@ -81,15 +82,18 @@ export default function Home() {
           <div className="services-grid">
             {homeServices.map((service, index) => (
               <div key={index} className="service-card cursor-pointer">
-                <div className="service-icon">{service.icon}</div>
+                <div className="service-icon text-rose-700">{service.icon}</div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
               </div>
             ))}
           </div>
           <div className="section-cta">
-            <Link to="/services" className="button button-primary">
-              View All Services
+            <Link to="/services">
+              <GenericButton
+                className=" button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                label="View All Services"
+              ></GenericButton>
             </Link>
           </div>
         </div>
@@ -105,9 +109,11 @@ export default function Home() {
           </div>
           <div className="areas-grid">
             {areas.map((area, index) => (
-              <div key={index} className="area-tag">
-                {area}
-              </div>
+              <GenericButton
+                key={index}
+                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                label={area}
+              ></GenericButton>
             ))}
           </div>
         </div>
@@ -124,17 +130,17 @@ export default function Home() {
               Contact us today for competitive pricing and bulk availability
             </p>
             <div className="cta-buttons">
-              <a
-                href="tel:+919876543210"
-                className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
-              >
-                Call +91 98765 43210
+              <a href="tel:+919876543210">
+                <GenericButton
+                  className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
+                  label="Call +91 98765 43210"
+                ></GenericButton>
               </a>
-              <Link
-                to="/contact"
-                className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
-              >
-                Get in Touch
+              <Link to="/contact">
+                <GenericButton
+                  className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
+                  label="Get in Touch"
+                ></GenericButton>
               </Link>
             </div>
           </div>
