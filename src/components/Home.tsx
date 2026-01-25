@@ -3,6 +3,7 @@ import SEO from "../components/SEO";
 import { areas, trustPoints } from "../data/data";
 import { homeServices } from "../data/services";
 import GenericButton from "./GenericButton";
+import GenericIcon from "./GenericIcon";
 
 export default function Home() {
   return (
@@ -82,7 +83,11 @@ export default function Home() {
           <div className="services-grid">
             {homeServices.map((service, index) => (
               <div key={index} className="service-card cursor-pointer">
-                <div className="service-icon text-rose-700">{service.icon}</div>
+                <GenericIcon
+                  icon={service.icon}
+                  className=" service-icon icon"
+                ></GenericIcon>
+
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
               </div>

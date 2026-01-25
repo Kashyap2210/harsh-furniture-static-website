@@ -1,6 +1,7 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import SEO from "../components/SEO";
 import { areas } from "../data/data";
+import GenericIcon from "./GenericIcon";
 
 export default function Contact() {
   return (
@@ -34,7 +35,7 @@ export default function Contact() {
               <div className="contact-methods">
                 <div className="contact-method">
                   <div className="contact-method-icon">
-                    <Phone size={24} />
+                    <GenericIcon icon={Phone} size={24} />
                   </div>
                   <div className="contact-method-content">
                     <h3>Phone</h3>
@@ -45,7 +46,11 @@ export default function Contact() {
 
                 <div className="contact-method">
                   <div className="contact-method-icon">
-                    <MessageCircle size={24} />
+                    <GenericIcon
+                      icon={MessageCircle}
+                      size={24}
+                      className="text-rose-700"
+                    />
                   </div>
                   <div className="contact-method-content">
                     <h3>WhatsApp</h3>
@@ -62,7 +67,7 @@ export default function Contact() {
 
                 <div className="contact-method">
                   <div className="contact-method-icon">
-                    <Mail size={24} />
+                    <GenericIcon icon={Mail} size={24} />
                   </div>
                   <div className="contact-method-content">
                     <h3>Email</h3>
@@ -75,7 +80,7 @@ export default function Contact() {
 
                 <div className="contact-method">
                   <div className="contact-method-icon">
-                    <MapPin size={24} />
+                    <GenericIcon icon={MapPin} size={24} />
                   </div>
                   <div className="contact-method-content">
                     <h3>Service Areas</h3>
@@ -85,7 +90,7 @@ export default function Contact() {
 
                 <div className="contact-method">
                   <div className="contact-method-icon">
-                    <Clock size={24} />
+                    <GenericIcon icon={Clock} size={24} />
                   </div>
                   <div className="contact-method-content">
                     <h3>Business Hours</h3>

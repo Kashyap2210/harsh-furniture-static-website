@@ -3,6 +3,7 @@ import SEO from "../components/SEO";
 import { perfectData } from "../data/data";
 import { servicesV2 } from "../data/services";
 import GenericButton from "./GenericButton";
+import GenericIcon from "./GenericIcon";
 
 export default function Services() {
   return (
@@ -29,7 +30,11 @@ export default function Services() {
             {servicesV2.map((service, index) => (
               <div key={index} className="service-detail-card">
                 <div className="service-detail-header">
-                  <div className="service-detail-icon">{service.icon}</div>
+                  {/* <div className="service-detail-icon">{service.icon}</div> */}
+                  <GenericIcon
+                    icon={service.icon}
+                    className="service-detail-icon icon"
+                  ></GenericIcon>
                   <h2 className="service-detail-title">{service.title}</h2>
                 </div>
                 <p className="service-detail-description">

@@ -7,44 +7,45 @@ import {
   Sofa,
   Sparkles,
   Zap,
+  type LucideIcon,
 } from "lucide-react";
 
 export interface IHomeService {
-  icon: JSX.Element;
+  icon: LucideIcon;
   title: string;
   description: string;
 }
 
 export const homeServices: IHomeService[] = [
   {
-    icon: <Bed size={40} />,
+    icon: Bed,
     title: "Beds & Mattresses",
     description:
       "Quality beds and mattresses available for rent in bulk quantities",
   },
   {
-    icon: <Building2 size={40} />,
+    icon: Building2,
     title: "Guest House Furniture",
     description:
       "Complete furniture solutions for guest houses and accommodations",
   },
   {
-    icon: <Briefcase size={40} />,
+    icon: Briefcase,
     title: "Office Furniture",
     description: "Professional office furniture rental for corporates",
   },
   {
-    icon: <Calendar size={40} />,
+    icon: Calendar,
     title: "Event Furniture",
     description: "Furniture rental for weddings, events, and banquets",
   },
   {
-    icon: <Sofa size={40} />,
+    icon: Sofa,
     title: "Home Furniture",
     description: "Temporary furniture solutions for homes and families",
   },
   {
-    icon: <Sparkles size={40} />,
+    icon: Sparkles,
     title: "Appliances",
     description: "Washing machines, coolers, and other appliances on rent",
   },
@@ -56,7 +57,7 @@ export interface IService extends IHomeService {
 
 export const servicesV2: IService[] = [
   {
-    icon: <Bed size={48} />,
+    icon: Bed,
     title: "Beds & Mattresses on Rent",
     description:
       "High-quality beds and mattresses available for rent in bulk quantities. Perfect for guest houses, hostels, and staff accommodations. We offer single beds, double beds, queen size, and king size options with comfortable mattresses.",
@@ -69,10 +70,10 @@ export const servicesV2: IService[] = [
     ],
   },
   {
-    icon: <Building2 size={48} />,
+    icon: Building2,
     title: "Guest House Furniture on Rent",
     description:
-      "Complete furniture solutions for guest houses and paying guest accommodations. We provide everything needed to furnish multiple rooms, from beds and wardrobes to dining furniture and living room sets.",
+      "Complete furniture solutions for guest houses and paying guest accommodations.",
     features: [
       "Complete room furniture packages",
       "Beds, mattresses, and wardrobes",
@@ -82,10 +83,10 @@ export const servicesV2: IService[] = [
     ],
   },
   {
-    icon: <Briefcase size={48} />,
+    icon: Briefcase,
     title: "Office Furniture on Rent",
     description:
-      "Professional office furniture rental for corporate offices, startups, and temporary workspaces. Our inventory includes desks, chairs, conference tables, and storage solutions suitable for modern office environments.",
+      "Professional office furniture rental for corporate offices and startups.",
     features: [
       "Executive desks and workstations",
       "Ergonomic office chairs",
@@ -95,10 +96,10 @@ export const servicesV2: IService[] = [
     ],
   },
   {
-    icon: <Calendar size={48} />,
+    icon: Calendar,
     title: "Event & Banquet Furniture on Rent",
     description:
-      "Furniture rental for weddings, events, conferences, and banquets. We provide chairs, tables, sofas, and decorative furniture to create comfortable and elegant event spaces for any occasion.",
+      "Furniture rental for weddings, events, conferences, and banquets.",
     features: [
       "Banquet chairs and tables",
       "Sofa sets and lounge furniture",
@@ -108,10 +109,9 @@ export const servicesV2: IService[] = [
     ],
   },
   {
-    icon: <Home size={48} />,
+    icon: Home,
     title: "Home Furniture on Rent",
-    description:
-      "Temporary furniture solutions for homes and families. Whether you are relocating, waiting for your permanent furniture, or need furniture for a short stay, we offer complete home furniture packages.",
+    description: "Temporary furniture solutions for homes and families.",
     features: [
       "Living room furniture sets",
       "Bedroom furniture packages",
@@ -121,13 +121,12 @@ export const servicesV2: IService[] = [
     ],
   },
   {
-    icon: <Zap size={48} />,
+    icon: Zap,
     title: "Appliances on Rent",
-    description:
-      "Household appliances available for rent, including washing machines, air coolers, refrigerators, and more. Ideal for temporary accommodations, guest houses, and rental properties.",
+    description: "Household appliances available for rent.",
     features: [
-      "Washing machines - semi and fully automatic",
-      "Air coolers and desert coolers",
+      "Washing machines",
+      "Air coolers",
       "Refrigerators",
       "Water purifiers",
       "Well-maintained and serviced regularly",
