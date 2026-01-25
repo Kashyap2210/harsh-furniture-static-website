@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { perfectData } from "../data/data";
 import { servicesV2 } from "../data/services";
-import GenericButton from "./GenericButton";
-import GenericIcon from "./GenericIcon";
+import GenericButton from "./generic-components/GenericButton";
+import GenericIcon from "./generic-components/GenericIcon";
 
 export default function Services() {
   return (

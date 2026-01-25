@@ -2,7 +2,7 @@ import { useState } from "react";
 import SEO from "../components/SEO";
 import { phoneNumber } from "../data/constants";
 import { categories, galleryItems } from "../data/data";
-import GenericButton from "./GenericButton";
+import GenericButton from "./generic-components/GenericButton";
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("all");

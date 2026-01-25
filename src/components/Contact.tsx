@@ -2,8 +2,8 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import SEO from "../components/SEO";
 import { emailId, phoneNumber } from "../data/constants";
 import { areas } from "../data/data";
-import GenericButton from "./GenericButton";
-import GenericIcon from "./GenericIcon";
+import GenericButton from "./generic-components/GenericButton";
+import GenericIcon from "./generic-components/GenericIcon";
 
 export default function Contact() {
   return (

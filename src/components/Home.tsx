@@ -3,8 +3,8 @@ import SEO from "../components/SEO";
 import { phoneNumber } from "../data/constants";
 import { areas, trustPoints } from "../data/data";
 import { homeServices } from "../data/services";
-import GenericButton from "./GenericButton";
-import GenericIcon from "./GenericIcon";
+import GenericButton from "./generic-components/GenericButton";
+import GenericIcon from "./generic-components/GenericIcon";
 
 export default function Home() {
   return (
