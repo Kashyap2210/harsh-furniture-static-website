@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { perfectData } from "../data/data";
 import { servicesV2 } from "../data/services";
+import GenericButton from "./GenericButton";
+import GenericIcon from "./GenericIcon";
 
 export default function Services() {
   return (
@@ -27,7 +30,11 @@ export default function Services() {
             {servicesV2.map((service, index) => (
               <div key={index} className="service-detail-card">
                 <div className="service-detail-header">
-                  <div className="service-detail-icon">{service.icon}</div>
+                  {/* <div className="service-detail-icon">{service.icon}</div> */}
+                  <GenericIcon
+                    icon={service.icon}
+                    className="service-detail-icon icon"
+                  ></GenericIcon>
                   <h2 className="service-detail-title">{service.title}</h2>
                 </div>
                 <p className="service-detail-description">
@@ -49,52 +56,31 @@ export default function Services() {
           <div className="section-header">
             <h2 className="section-title">Perfect For</h2>
           </div>
+
           <div className="perfect-for-grid">
-            <div className="perfect-for-card">
-              <h3>Guest House Owners</h3>
-              <p>
-                Bulk furniture rental for multiple rooms at competitive prices
-              </p>
-            </div>
-            <div className="perfect-for-card">
-              <h3>Corporate Offices</h3>
-              <p>Professional office furniture for new setups and expansions</p>
-            </div>
-            <div className="perfect-for-card">
-              <h3>Event Planners</h3>
-              <p>Complete event furniture solutions with delivery and setup</p>
-            </div>
-            <div className="perfect-for-card">
-              <h3>Wedding Planners</h3>
-              <p>Elegant furniture for weddings and banquets</p>
-            </div>
-            <div className="perfect-for-card">
-              <h3>Families</h3>
-              <p>Temporary furniture for relocations and short stays</p>
-            </div>
-            <div className="perfect-for-card">
-              <h3>Staff Accommodations</h3>
-              <p>Cost-effective furniture for employee housing</p>
-            </div>
+            {perfectData.map((item) => (
+              <div key={item.title} className="perfect-for-card cursor-pointer">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="cta-section">
+      <section className="cta-section  bg-pink-50">
         <div className="container">
           <div className="cta-content">
             <h2 className="cta-title">Get a Quote Today</h2>
             <p className="cta-text">
               Contact us for competitive pricing and bulk rental discounts
             </p>
-            <div className="cta-buttons">
-              <a href="tel:+919876543210" className="button button-light">
-                Call +91 98765 43210
-              </a>
-              <Link to="/contact" className="button button-outline">
-                Contact Us
-              </Link>
-            </div>
+            <Link to="/contact">
+              <GenericButton
+                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                label="Contact Us"
+              ></GenericButton>
+            </Link>
           </div>
         </div>
       </section>
