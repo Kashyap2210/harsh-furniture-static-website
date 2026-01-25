@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SEO from "../components/SEO";
+import { phoneNumber } from "../data/constants";
 import { categories, galleryItems } from "../data/data";
 import GenericButton from "./GenericButton";
 
@@ -85,7 +86,7 @@ export default function Gallery() {
             </p>
             <div className="gallery-note-cta">
               <a
-                href="https://wa.me/919876543210?text=Hi, I'd like to see more furniture options"
+                href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

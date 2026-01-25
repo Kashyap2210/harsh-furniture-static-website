@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { phoneNumber } from "../data/constants";
 import { areas, trustPoints } from "../data/data";
 import { homeServices } from "../data/services";
 import GenericButton from "./GenericButton";
@@ -27,25 +28,28 @@ export default function Home() {
               Thane.
             </p>
             <div className="hero-cta">
-              {/* <a
-                href="tel:+919876543210"
-                className="button button-light bg-gray-50 text-rose-700 hover:bg-pink-100 font-semibold px-6 py-3 rounded-xl transition"
-              >
-                Call +91 98765 43210
-              </a> */}
-              <a
-                href="tel:+919876543210"
-                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
-              >
-                Call Now
+              <a href={`tel:${phoneNumber}`}>
+                <GenericButton
+                  label={"Call Now"}
+                  className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                  // onClick={() => {
+                  //   console.log(phoneNumber);
+                  // }}
+                ></GenericButton>
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hi, I'm interested in furniture rental services"
+                href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                // className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
               >
-                WhatsApp Us
+                <GenericButton
+                  label={"WhatsApp Us"}
+                  className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+                  // onClick={() => {
+                  //   console.log(phoneNumber);
+                  // }}
+                ></GenericButton>
               </a>
             </div>
           </div>
@@ -135,10 +139,10 @@ export default function Home() {
               Contact us today for competitive pricing and bulk availability
             </p>
             <div className="cta-buttons">
-              <a href="tel:+919876543210">
+              <a href={`tel:${phoneNumber}`}>
                 <GenericButton
                   className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
-                  label="Call +91 98765 43210"
+                  label={`Call Now`}
                 ></GenericButton>
               </a>
               <Link to="/contact">

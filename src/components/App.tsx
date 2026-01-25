@@ -1,17 +1,9 @@
 import { Building2, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { values } from "../data/data";
 
 export default function About() {
-  const values = [
-    "Quality furniture in bulk quantities",
-    "Competitive and transparent pricing",
-    "On-time delivery and pickup",
-    "Reliable customer service",
-    "Flexible rental periods",
-    "Well-maintained inventory",
-  ];
-
   return (
     <>
       <SEO

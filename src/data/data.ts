@@ -165,3 +165,12 @@ export const perfectData: IPerfectFor[] = [
     description: "Cost-effective furniture for employee housing",
   },
 ];
+
+export const values = [
+  "Quality furniture in bulk quantities",
+  "Competitive and transparent pricing",
+  "On-time delivery and pickup",
+  "Reliable customer service",
+  "Flexible rental periods",
+  "Well-maintained inventory",
+];
