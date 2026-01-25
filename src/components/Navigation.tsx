@@ -1,6 +1,7 @@
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { phoneNumber } from "../data/constants";
 import { navLinks } from "../data/data";
 
 export default function Navigation() {
@@ -35,7 +36,7 @@ export default function Navigation() {
               {link.name}
             </Link>
           ))}
-          <a href="tel:+919876543210" className="nav-cta">
+          <a href={`tel:${phoneNumber}`} className="nav-cta">
             <Phone size={18} />
             Call Now
           </a>

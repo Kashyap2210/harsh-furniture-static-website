@@ -1,5 +1,6 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import SEO from "../components/SEO";
+import { emailId, phoneNumber } from "../data/constants";
 import { areas } from "../data/data";
 import GenericButton from "./GenericButton";
 import GenericIcon from "./GenericIcon";
@@ -9,7 +10,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Us"
-        description="Contact Harsh Furniture Hirers for furniture rental in Mumbai, Navi Mumbai, and Thane. Call +91 98765 43210 or WhatsApp us for bulk furniture rental quotes."
+        description={`Contact Harsh Furniture Hirers for furniture rental in Mumbai, Navi Mumbai, and Thane. Call ${phoneNumber} or WhatsApp us for bulk furniture rental quotes.`}
         keywords="contact furniture rental Mumbai, furniture hire contact, Harsh Furniture Hirers contact"
       />
 
@@ -40,7 +41,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h3>Phone</h3>
-                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href={`tel:+91${phoneNumber}`}>{`+91-${phoneNumber}`}</a>
                   <p>Call us for immediate assistance</p>
                 </div>
               </div>
@@ -56,11 +57,11 @@ export default function Contact() {
                 <div className="contact-method-content">
                   <h3>WhatsApp</h3>
                   <a
-                    href="https://wa.me/919876543210?text=Hi, I'm interested in furniture rental services"
+                    href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    +91 98765 43210
+                    {phoneNumber}
                   </a>
                   <p>Quick response on WhatsApp</p>
                 </div>
@@ -72,9 +73,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h3>Email</h3>
-                  <a href="mailto:info@harshfurniturehirers.com">
-                    info@harshfurniturehirers.com
-                  </a>
+                  <a href={`mailto:${emailId}`}>{emailId}</a>
                   <p>Send us your requirements</p>
                 </div>
               </div>

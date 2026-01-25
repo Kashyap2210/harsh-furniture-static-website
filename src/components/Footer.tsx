@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { emailId, phoneNumber } from "../data/constants";
 
 export default function Footer() {
   return (
@@ -52,13 +53,11 @@ export default function Footer() {
             <ul className="footer-contact">
               <li>
                 <Phone size={18} />
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href={`tel:+91-${phoneNumber}`}>{`+91-${phoneNumber}`}</a>
               </li>
               <li>
                 <Mail size={18} />
-                <a href="mailto:info@harshfurniturehirers.com">
-                  info@harshfurniturehirers.com
-                </a>
+                <a href={`mailto:${emailId}`}>{emailId}</a>
               </li>
               <li>
                 <MapPin size={18} />
