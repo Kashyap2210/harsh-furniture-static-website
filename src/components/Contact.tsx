@@ -1,6 +1,6 @@
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import SEO from "../components/SEO";
-import { phoneNumber } from "../data/constants";
+import { emailId, phoneNumber } from "../data/constants";
 import { areas } from "../data/data";
 import GenericButton from "./GenericButton";
 import GenericIcon from "./GenericIcon";
@@ -73,9 +73,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h3>Email</h3>
-                  <a href="mailto:info@harshfurniturehirers.com">
-                    info@harshfurniturehirers.com
-                  </a>
+                  <a href={`mailto:${emailId}`}>{emailId}</a>
                   <p>Send us your requirements</p>
                 </div>
               </div>
