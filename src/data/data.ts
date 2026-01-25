@@ -132,3 +132,36 @@ export const navLinks: INavLink[] = [
   { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
 ];
+
+export interface IPerfectFor {
+  title: string;
+  description: string;
+}
+
+export const perfectData: IPerfectFor[] = [
+  {
+    title: "Guest House Owners",
+    description:
+      "Bulk furniture rental for multiple rooms at competitive prices",
+  },
+  {
+    title: "Corporate Offices",
+    description: "Professional office furniture for new setups and expansions",
+  },
+  {
+    title: "Event Planners",
+    description: "Complete event furniture solutions with delivery and setup",
+  },
+  {
+    title: "Wedding Planners",
+    description: "Elegant furniture for weddings and banquets",
+  },
+  {
+    title: "Families",
+    description: "Temporary furniture for relocations and short stays",
+  },
+  {
+    title: "Staff Accommodations",
+    description: "Cost-effective furniture for employee housing",
+  },
+];
