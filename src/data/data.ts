@@ -1,3 +1,9 @@
+import ConferenceTable from "../assets/gallery/Conference_Table.jpg";
+import DiningTableSet from "../assets/gallery/Dining_Table_Set.jpg";
+import ExecutiveDesk from "../assets/gallery/executive_desk.jpg";
+import OfficeChairs from "../assets/gallery/Office_Chairs.jpg";
+import WardrobeStorage from "../assets/gallery/Wardrobe_Storage.jpg";
+
 export const trustPoints = [
   "Bulk Availability",
   "Competitive Pricing",
@@ -40,9 +46,11 @@ export interface IGalleryItem {
   category: string;
   title: string;
   description: string;
+  importPath?: string;
 }
 
 export const galleryItems: IGalleryItem[] = [
+  // ===== BEDS =====
   {
     category: "beds",
     title: "Queen Size Bed",
@@ -58,6 +66,8 @@ export const galleryItems: IGalleryItem[] = [
     title: "King Size Bed",
     description: "Spacious king size bed with premium mattress",
   },
+
+  // ===== GUEST HOUSE =====
   {
     category: "guest-house",
     title: "Guest Room Setup",
@@ -72,22 +82,30 @@ export const galleryItems: IGalleryItem[] = [
     category: "guest-house",
     title: "Wardrobe & Storage",
     description: "Storage solutions for guest accommodations",
+    importPath: WardrobeStorage,
   },
+
+  // ===== OFFICE =====
   {
     category: "office",
     title: "Executive Desk",
     description: "Professional office desk with storage",
+    importPath: ExecutiveDesk,
   },
   {
     category: "office",
     title: "Office Chairs",
     description: "Ergonomic office chairs",
+    importPath: OfficeChairs,
   },
   {
     category: "office",
     title: "Conference Table",
     description: "Large conference table for meetings",
+    importPath: ConferenceTable,
   },
+
+  // ===== EVENT =====
   {
     category: "event",
     title: "Banquet Chairs",
@@ -103,6 +121,8 @@ export const galleryItems: IGalleryItem[] = [
     title: "Lounge Furniture",
     description: "Comfortable seating for event spaces",
   },
+
+  // ===== HOME =====
   {
     category: "home",
     title: "Living Room Set",
@@ -112,6 +132,7 @@ export const galleryItems: IGalleryItem[] = [
     category: "home",
     title: "Dining Table Set",
     description: "Dining table with chairs",
+    importPath: DiningTableSet,
   },
   {
     category: "home",

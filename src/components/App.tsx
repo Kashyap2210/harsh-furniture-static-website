@@ -1,5 +1,6 @@
-import { Building2, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import aboutUs from "../assets/gallery/AboutUs.jpeg";
 import SEO from "../components/SEO";
 import { values } from "../data/data";
 
@@ -49,8 +50,7 @@ export default function About() {
             </div>
             <div className="content-image">
               <div className="image-placeholder">
-                <Building2 size={80} />
-                <p>Professional Furniture Rental Services</p>
+                <img src={aboutUs} alt="" className="border rounded-lg" />
               </div>
             </div>
           </div>

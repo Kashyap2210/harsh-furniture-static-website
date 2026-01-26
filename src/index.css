@@ -579,18 +579,10 @@
 
   .image-placeholder {
     width: 100%;
-    aspect-ratio: 1;
-    background: var(--bg-alt);
-    border: 2px dashed var(--border);
     border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 1rem;
-    color: var(--text-light);
     padding: 2rem;
-    text-align: center;
+    cursor: pointer;
   }
 
   .values-grid {
@@ -810,6 +802,12 @@
     overflow: hidden;
     border: 1px solid var(--border);
     transition: all 0.3s;
+  }
+
+  .image-cover {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
   }
 
   .gallery-item:hover {
