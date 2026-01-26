@@ -4,7 +4,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Home from "./components/Home";
-import MobileCTA from "./components/MobileCTA";
 import Navigation from "./components/Navigation";
 import Services from "./components/Services";
 
@@ -23,7 +22,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <MobileCTA />
+        {/* <MobileCTA /> */}
       </div>
     </Router>
   );
