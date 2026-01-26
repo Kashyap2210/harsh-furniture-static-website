@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./components/App";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -9,7 +9,7 @@ import Services from "./components/Services";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="app">
         <Navigation />
         <main className="main-content">
@@ -24,7 +24,7 @@ function App() {
         <Footer />
         {/* <MobileCTA /> */}
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
