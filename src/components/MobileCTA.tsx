@@ -6,7 +6,7 @@
 //   return (
 //     <div className="mobile-cta">
 //       <a
-//         href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
+//         href={`https://wa.me/+91${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
 //         target="_blank"
 //         rel="noopener noreferrer"
 //       >
