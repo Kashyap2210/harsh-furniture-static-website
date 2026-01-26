@@ -1,7 +1,8 @@
 import { useState } from "react";
 import SEO from "../components/SEO";
 import { phoneNumber } from "../data/constants";
-import { categories, galleryItems } from "../data/data";
+import { categories } from "../data/data";
+import { galleryItems } from "../data/gallery";
 import GenericButton from "./GenericButton";
 
 export default function Gallery() {
@@ -50,7 +51,11 @@ export default function Gallery() {
             {filteredItems.map((item, index) => (
               <div key={index} className="gallery-item">
                 {item.importPath ? (
-                  <img src={item.importPath} alt={item.title} className="image-cover"/>
+                  <img
+                    src={item.importPath}
+                    alt={item.title}
+                    className="image-cover"
+                  />
                 ) : (
                   <div className="gallery-image-placeholder">
                     <div className="gallery-image-icon">
