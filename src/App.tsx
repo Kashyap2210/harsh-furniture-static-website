@@ -5,7 +5,7 @@ import Footer from "./components/footer/Footer";
 import Gallery from "./components/gallery/Gallery";
 import Home from "./components/home-page/Home";
 import Navigation from "./components/Navigation";
-import Services from "./components/Services";
+import Services from "./components/services/Services";
 
 function App() {
   return (
