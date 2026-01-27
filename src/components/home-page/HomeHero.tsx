@@ -1,5 +1,5 @@
-import { phoneNumber } from "../../data/constants";
-import GenericButton from "../generic-components/GenericButton";
+import CallNow from "../CallNow";
+import WhatsAppButton from "../Whatsapp";
 
 export default function HomeHero() {
   return (
@@ -16,23 +16,9 @@ export default function HomeHero() {
           </p>
 
           <div className="hero-cta">
-            <a href={`tel:${phoneNumber}`}>
-              <GenericButton
-                label="Call Now"
-                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
-              />
-            </a>
+            <CallNow className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition" />
 
-            <a
-              href={`https://wa.me/+91${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GenericButton
-                label="WhatsApp Us"
-                className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
-              />
-            </a>
+            <WhatsAppButton />
           </div>
         </div>
       </div>

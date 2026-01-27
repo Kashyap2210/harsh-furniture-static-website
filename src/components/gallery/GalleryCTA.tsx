@@ -1,5 +1,4 @@
-import { phoneNumber } from "../../data/constants";
-import GenericButton from "../generic-components/GenericButton";
+import WhatsAppButton from "../Whatsapp";
 
 export default function GalleryCTA() {
   return (
@@ -14,16 +13,7 @@ export default function GalleryCTA() {
           </p>
 
           <div className="gallery-note-cta">
-            <a
-              href={`https://wa.me/+91${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GenericButton
-                className="button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
-                label="Whatsapp"
-              />
-            </a>
+            <WhatsAppButton />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { phoneNumber } from "../../data/constants";
+import CallNow from "../CallNow";
 import GenericButton from "../generic-components/GenericButton";
 
 export default function HomeCTA() {
@@ -16,12 +16,7 @@ export default function HomeCTA() {
           </p>
 
           <div className="cta-buttons">
-            <a href={`tel:${phoneNumber}`}>
-              <GenericButton
-                label="Call Now"
-                className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition"
-              />
-            </a>
+            <CallNow className="button button-light bg-gray-50 text-rose-700 font-semibold px-6 py-3 rounded-xl transition" />
 
             <Link to="/contact">
               <GenericButton
