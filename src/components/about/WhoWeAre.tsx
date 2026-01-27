@@ -26,6 +26,7 @@ export default function WhoWeAre() {
           <div className="content-image">
             <img
               src={aboutUs}
+              cadasdk
               alt="About us"
               className="border rounded-lg"
               loading="lazy"
