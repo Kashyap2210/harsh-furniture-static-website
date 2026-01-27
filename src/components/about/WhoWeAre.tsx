@@ -25,7 +25,12 @@ export default function WhoWeAre() {
           </div>
 
           <div className="content-image">
-            <img src={aboutUs} alt="About us" className="border rounded-lg" />
+            <img
+              src={aboutUs}
+              alt="About us"
+              className="border rounded-lg"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
