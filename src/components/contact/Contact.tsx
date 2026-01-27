@@ -1,8 +1,8 @@
-import SEO from "../components/SEO";
-import { phoneNumber } from "../data/constants";
-import AreasWeServe from "./contact/AreasWeServe";
-import ContactHero from "./contact/ContactHero";
-import ContactInfo from "./contact/ContactInfo";
+import { phoneNumber } from "../../data/constants";
+import SEO from "../SEO";
+import AreasWeServe from "./AreasWeServe";
+import ContactHero from "./ContactHero";
+import ContactInfo from "./ContactInfo";
 
 export default function Contact() {
   return (
