@@ -21,6 +21,7 @@ export default function GalleryGrid({ selectedCategory }: GalleryGridProps) {
                   src={item.importPath}
                   alt={item.title}
                   className="image-cover"
+                  loading="lazy"
                 />
               ) : (
                 <div className="gallery-image-placeholder">
