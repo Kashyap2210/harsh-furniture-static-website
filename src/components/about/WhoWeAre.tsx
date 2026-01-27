@@ -23,7 +23,6 @@ export default function WhoWeAre() {
               made us a trusted name in the furniture rental business.
             </p>
           </div>
-          asdadasd
           <div className="content-image">
             <img
               src={aboutUs}
