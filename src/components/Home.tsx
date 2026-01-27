@@ -38,7 +38,7 @@ export default function Home() {
                 ></GenericButton>
               </a>
               <a
-                href={`https://wa.me/${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
+                href={`https://wa.me/+91${phoneNumber}?text=Hi, I'm interested in furniture rental services`}
                 target="_blank"
                 rel="noopener noreferrer"
                 // className="button button-light bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
