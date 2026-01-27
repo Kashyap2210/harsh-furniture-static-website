@@ -23,10 +23,10 @@ export default function WhoWeAre() {
               made us a trusted name in the furniture rental business.
             </p>
           </div>
+
           <div className="content-image">
             <img
               src={aboutUs}
-              cadasdk
               alt="About us"
               className="border rounded-lg"
               loading="lazy"
