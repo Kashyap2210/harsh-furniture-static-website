@@ -1,7 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import aboutUs from "../../assets/gallery/AboutUs.jpeg";
 import { values } from "../../data/data";
-import aboutUs from "../assets/gallery/AboutUs.jpeg";
 import SEO from "../SEO";
 
 export default function About() {
