@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { emailId, phoneNumber } from "../../data/constants";
+import FooterSocials from "./FooterSocials";
 
 export default function FooterContact() {
   return (
@@ -19,6 +20,9 @@ export default function FooterContact() {
         <li>
           <MapPin size={18} />
           <span>Mumbai, Navi Mumbai, Thane</span>
+        </li>
+        <li>
+          <FooterSocials />
         </li>
       </ul>
     </div>
